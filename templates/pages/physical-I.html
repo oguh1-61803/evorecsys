@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{static_url("css/w3.css")}}>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href={{static_url("css/physical.css")}}>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src={{static_url("scripts/physical.js")}} async></script>
+    <title>EvoRecSys - English - Physical data I</title>
+</head>
+<body>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <div class="w3-display-topleft w3-padding-large w3-large">
+        <a class="text-white">EvoRecSys</a>
+    </div>
+    <div class="w3-display-middle w3-border w3-round w3-half w3-padding-large w3-large"
+         style="background-color: rgba(105, 105, 105, 0.75);">
+        <h1 class="w3-xlarge w3-animate-top">First of all, we have to know more about your physical status. Please,
+            answer the following questions:</h1>
+        <br>
+        <form method="post">
+            <p class="w3-large w3-animate-left">Which is your genre?</p>
+            <div class="w3-container">
+                <div class="w3-display-container-left w3-cell">
+                    <label>Female</label>
+                </div>
+                <div class="w3-display-container w3-cell">
+                    <div class=" custom-control custom-switch">
+                        <label> </label> <label> </label>
+                        <input name="genre" type="checkbox" class="custom-control-input" id="genre">
+                        <label class="custom-control-label" for="genre"></label>
+                    </div>
+                </div>
+                <div class="w3-display-container-left w3-cell">
+                    <label>Male</label>
+                </div>
+            </div>
+            <p class="w3-large w3-animate-right">Which is your age?</p>
+            <div class="w3-row">
+                <div class="w3-container w3-threequarter">
+                    <input name="age" type="range" oninput="getAge(this.value)" class="custom-range" min="10" max="95"
+                           value="47">
+                </div>
+                <div class="w3-container w3-quarter">
+                    <label id="age">47</label> <label>years</label>
+                </div>
+            </div>
+            <!---<input name="age" type="range" oninput="getAge(this.value)" class="custom-range" min="10" max="95"
+                   value="10">
+                    <label id="age">10</label> <label>years</label>-->
+            <div class="w3-display w3-center">
+                <br>
+                <input type="submit" class="w3-btn w3-ripple w3-medium w3-black w3-round-medium" value="Next">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
+<!---
+https://www.w3schools.com/css/img_forest.jpg

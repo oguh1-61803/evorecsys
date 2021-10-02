@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{static_url("css/w3.css")}}>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href={{static_url("css/processing.css")}}>
+    <!-- <script type="text/javascript" src={{static_url("scripts/processing.js")}} async></script> -->
+    <script type="text/javascript" src={{static_url("scripts/processing.js")}} ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>EvoRecSys - English - Processing data</title>
+</head>
+<body>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <div class="w3-display-topleft w3-padding-large w3-large">
+        EvoRecSys
+    </div>
+    <div class="w3-display-middle w3-border w3-round w3-half w3-padding-large w3-large"
+         style="background-color: rgba(105, 105, 105, 0.75);">
+        <h1 class="w3-large">We are creating your recommendations; this may take approximately 60 seconds.
+            Please, hold on...</h1>
+        <div class="w3-display w3-center">
+            <p><i class="fa fa-spinner w3-spin w3-center" style="font-size:64px"></i></p>
+        </div>
+        <form id="my-form" method="post">
+            <button id="trigger-button" type="submit" hidden></button>
+        </form>
+    </div>
+</div>
+</body>
+<script>send();</script>
+<!--
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementById('trigger-button').click();
+    });
+</script>
+-->
+</html>
