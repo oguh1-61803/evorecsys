@@ -12,7 +12,8 @@ EvoRecSys was written in **Python 3.9**.
 * scipy	                  1.7.1	
 * setuptools	            58.2.0	
 * threadpoolctl	          3.0.0	
-* tornado	                6.1	
+* tornado	                6.1
+* wheel                   0.37.0	
 
 > Database
 
