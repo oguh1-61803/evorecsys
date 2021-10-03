@@ -55,7 +55,7 @@ class GeneticAlgorithm:
             population.obtain_best_individual()
             generation_index += 1
 
-        print('I have finished; recommendations are:')
+        print('I have finished; the recommendations are:')
         self.__print_phenotype(population.best_individual.phenotype)
 
         return population.best_individual.phenotype
@@ -224,90 +224,90 @@ class GeneticAlgorithm:
                 self.mutation_dictionary[similar] = location_list
 
     # This method prints on console the recommendations built by the Genetic Algorithms.
-    def __print_phenotype(self, genotype):
+    def __print_phenotype(self, phenotype):
 
-        print('  Comida 0, total: %s --- Comida 1, total: %s --- Comida 2, total: %s' % (
-            genotype[0].meal.serving_size, genotype[1].meal.serving_size, genotype[2].meal.serving_size))
-        print('  Comida 0, calorías: %s --- Comida 1, calorías: %s --- Comida 2, calorías: %s' % (
-            genotype[0].meal.number_of_calories, genotype[1].meal.number_of_calories,
-            genotype[2].meal.number_of_calories))
-        print('  Comida 0, proteína: %s --- Comida 1, proteína: %s --- Comida 2, proteína: %s' % (
-            genotype[0].meal.proteins, genotype[1].meal.proteins, genotype[2].meal.proteins))
-        print('  Comida 0, carbo: %s --- Comida 1, carbo: %s --- Comida 2, carbo: %s' % (
-            genotype[0].meal.carbohydrates, genotype[1].meal.carbohydrates, genotype[2].meal.carbohydrates))
-        print('  Comida 0, azúcah: %s --- Comida 1, azúcah: %s --- Comida 2, azúcah: %s' % (
-            genotype[0].meal.sugars, genotype[1].meal.sugars, genotype[2].meal.sugars))
-        print('  Comida 0, fibra: %s --- Comida 1, fibra: %s --- Comida 2, fibra: %s' % (
-            genotype[0].meal.fiber, genotype[1].meal.fiber, genotype[2].meal.fiber))
-        print('  Comida 0, grasa: %s --- Comida 1, grasa: %s --- Comida 2, grasa: %s' % (
-            genotype[0].meal.fats, genotype[1].meal.fats, genotype[2].meal.fats))
-        print('  Comida 0, grasa sat: %s --- Comida 1, grasa sat: %s --- Comida 2, grasa sat: %s' % (
-            genotype[0].meal.saturated_fats, genotype[1].meal.saturated_fats, genotype[2].meal.saturated_fats))
-        print('  Comida 0, sodio: %s --- Comida 1, sodio: %s, --- Comida 1, sodio: %s' % (
-            genotype[0].meal.sodium, genotype[1].meal.sodium, genotype[2].meal.sodium))
+        print('  Meal 1, total (grams): %s --- Meal 2, total (grams): %s --- Meal 3, total (grams): %s' % (
+            phenotype[0].meal.serving_size, phenotype[1].meal.serving_size, phenotype[2].meal.serving_size))
+        print('  Meal 1, calories: %s --- Meal 2, calories: %s --- Meal 3, calories: %s' % (
+            phenotype[0].meal.number_of_calories, phenotype[1].meal.number_of_calories,
+            phenotype[2].meal.number_of_calories))
+        print('  Meal 1, protein: %s --- Meal 2, protein: %s --- Meal 3, protein: %s' % (
+            phenotype[0].meal.proteins, phenotype[1].meal.proteins, phenotype[2].meal.proteins))
+        print('  Meal 1, carbohydrates: %s --- Meal 2, carbohydrates: %s --- Meal 3, carbohydrates: %s' % (
+            phenotype[0].meal.carbohydrates, phenotype[1].meal.carbohydrates, phenotype[2].meal.carbohydrates))
+        print('  Meal 1, sugar: %s --- Meal 2, sugar: %s --- Meal 3, sugar: %s' % (
+            phenotype[0].meal.sugars, phenotype[1].meal.sugars, phenotype[2].meal.sugars))
+        print('  Meal 1, fiber: %s ---  Meal 2, fiber: %s ---  Meal 3, fiber: %s' % (
+            phenotype[0].meal.fiber, phenotype[1].meal.fiber, phenotype[2].meal.fiber))
+        print('  Meal 1, fat: %s --- Meal 2, fat: %s --- Meal 3, fat: %s' % (
+            phenotype[0].meal.fats, phenotype[1].meal.fats, phenotype[2].meal.fats))
+        print('  Meal 1, sat fat: %s --- Meal 2, sat fat: %s --- Meal 3, sat fat: %s' % (
+            phenotype[0].meal.saturated_fats, phenotype[1].meal.saturated_fats, phenotype[2].meal.saturated_fats))
+        print('  Meal 1, sodium: %s --- Meal 2, sodium: %s, --- Meal 3, sodium: %s' % (
+            phenotype[0].meal.sodium, phenotype[1].meal.sodium, phenotype[2].meal.sodium))
         print(' ---***---***--- ')
-        main0 = genotype[0].meal.main_food_item
-        main1 = genotype[1].meal.main_food_item
-        main2 = genotype[2].meal.main_food_item
-        print('  Comida 0, principal: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
+        main0 = phenotype[0].meal.main_food_item
+        main1 = phenotype[1].meal.main_food_item
+        main2 = phenotype[2].meal.main_food_item
+        print('  Meal 1, main: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
               (main0.name, main0.category, main0.serving_size, main0.number_of_calories, main0.protein, main0.carbohydrate,
                main0.sugar, main0.fiber, main0.fat, main0.saturated_fat, main0.sodium))
-        print('  Comida 1, principal: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
+        print('  Meal 2, main: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
               (main1.name, main1.category, main1.serving_size, main1.number_of_calories, main1.protein, main1.carbohydrate,
                main1.sugar, main1.fiber, main1.fat, main1.saturated_fat, main1.sodium))
-        print('  Comida 2, principal: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
+        print('  Meal 3, main: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
               (main2.name, main2.category, main2.serving_size, main2.number_of_calories, main2.protein, main2.carbohydrate,
                main2.sugar, main2.fiber, main2.fat, main2.saturated_fat, main2.sodium))
         print(' ////////////// ')
-        sides0 = genotype[0].meal.side_food_items_list
-        sides1 = genotype[1].meal.side_food_items_list
-        sides2 = genotype[2].meal.side_food_items_list
-        print('  Comida 0, acom 0: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
+        sides0 = phenotype[0].meal.side_food_items_list
+        sides1 = phenotype[1].meal.side_food_items_list
+        sides2 = phenotype[2].meal.side_food_items_list
+        print('  Meal 1, side 1: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
               (sides0[0].name, sides0[0].category, sides0[0].serving_size, sides0[0].number_of_calories, sides0[0].protein,
                sides0[0].carbohydrate, sides0[0].sugar, sides0[0].fiber, sides0[0].fat, sides0[0].saturated_fat,
                sides0[0].sodium))
-        print('  Comida 1, acom 0: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
+        print('  Meal 2, side 1: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
               (sides1[0].name, sides1[0].category, sides1[0].serving_size, sides1[0].number_of_calories, sides1[0].protein,
                sides1[0].carbohydrate, sides1[0].sugar, sides1[0].fiber, sides1[0].fat, sides1[0].saturated_fat,
                sides1[0].sodium))
-        print('  Comida 2, acom 0: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
+        print('  Meal 3, side 1: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
               (sides2[0].name, sides2[0].category, sides2[0].serving_size, sides2[0].number_of_calories, sides2[0].protein,
                sides2[0].carbohydrate, sides2[0].sugar, sides2[0].fiber, sides2[0].fat, sides2[0].saturated_fat,
                sides2[0].sodium))
         print(' *---* ')
-        print('  Comida 0, acom 1: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
+        print('  Meal 1, side 2: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
               (sides0[1].name, sides0[1].category, sides0[1].serving_size, sides0[1].number_of_calories, sides0[1].protein,
                sides0[1].carbohydrate, sides0[1].sugar, sides0[1].fiber, sides0[1].fat, sides0[1].saturated_fat,
                sides0[1].sodium))
-        print('  Comida 1, acom 1: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
+        print('  Meal 2, side 2: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
               (sides1[1].name, sides1[1].category, sides1[1].serving_size, sides1[1].number_of_calories, sides1[1].protein,
                sides1[1].carbohydrate, sides1[1].sugar, sides1[1].fiber, sides1[1].fat, sides1[1].saturated_fat,
                sides1[1].sodium))
-        print('  Comida 2, acom 1: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
+        print('  Meal 3, side 2: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
               (sides2[1].name, sides2[1].category, sides2[1].serving_size, sides2[1].number_of_calories, sides2[1].protein,
                sides2[1].carbohydrate, sides2[1].sugar, sides2[1].fiber, sides2[1].fat, sides2[1].saturated_fat,
                sides2[1].sodium))
         print(' *---* ')
-        print('  Comida 0, acom 2: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
+        print('  Meal 1, side 3: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
               (sides0[2].name, sides0[2].category, sides0[2].serving_size, sides0[2].number_of_calories, sides0[2].protein,
                sides0[2].carbohydrate, sides0[2].sugar, sides0[2].fiber, sides0[2].fat, sides0[2].saturated_fat,
                sides0[2].sodium))
-        print('  Comida 1, acom 2: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
+        print('  Meal 2, side 3: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
               (sides1[2].name, sides1[2].category, sides1[2].serving_size, sides1[2].number_of_calories, sides1[2].protein,
                sides1[2].carbohydrate, sides1[2].sugar, sides1[2].fiber, sides1[2].fat, sides1[2].saturated_fat,
                sides1[2].sodium))
-        print('  Comida 2, acom 2: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
+        print('  Meal 3, side 3: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
               (sides2[2].name, sides2[2].category, sides2[2].serving_size, sides2[2].number_of_calories, sides2[2].protein,
                sides2[2].carbohydrate, sides2[2].sugar, sides2[2].fiber, sides2[2].fat, sides2[2].saturated_fat,
                sides2[2].sodium))
         print(' ---***---***--- ')
-        ex0 = genotype[0].pa
-        ex1 = genotype[1].pa
-        ex2 = genotype[2].pa
-        print('Ejercicio 0: %s, %s, %s, %s, %s, %s, %s' % (
+        ex0 = phenotype[0].pa
+        ex1 = phenotype[1].pa
+        ex2 = phenotype[2].pa
+        print('PA 1: %s, %s, %s, %s, %s, %s, %s' % (
             ex0.name, ex0.category, ex0.indoors, ex0.outdoors, ex0.intensity, ex0.met, ex0.duration))
-        print('Ejercicio 1: %s, %s, %s, %s, %s, %s, %s' % (
+        print('PA 2: %s, %s, %s, %s, %s, %s, %s' % (
             ex1.name, ex1.category, ex1.indoors, ex1.outdoors, ex1.intensity, ex1.met, ex1.duration))
-        print('Ejercicio 2: %s, %s, %s, %s, %s, %s, %s' % (
+        print('PA 3: %s, %s, %s, %s, %s, %s, %s' % (
             ex2.name, ex2.category, ex2.indoors, ex2.outdoors, ex2.intensity, ex2.met, ex2.duration))
 
