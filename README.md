@@ -6,7 +6,7 @@ Evolutionary Recommender System (EvoRecSys) is a simple Recommender System for w
 
 2. A suggested time to spend on a suggested physical activity.
 
-To build recommendations EvoRecSys needs your physical status, your food preferences and your physical activity preferences...Don't worry! EvoRecSys will ask you about it. 
+To build recommendations, EvoRecSys needs your physical status, your food preferences and your physical activity preferences...Don't worry! EvoRecSys will ask you about it. 
 
 > **Important Notice**
 
