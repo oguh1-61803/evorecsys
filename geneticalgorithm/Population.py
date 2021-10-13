@@ -143,6 +143,7 @@ class Population:
                 child2 = Individual()
                 child2.set_phenotype(child_phenotype_2)
                 children.insert(crossover_aux_index, child2)
+                crossover_aux_index += 1
 
             else:
 
