@@ -12,4 +12,4 @@ To build recommendations, EvoRecSys needs your physical status, your food prefer
 
 * EvoRecSys uses the W3 framework Google Fonts and BootstrapCDN to look "cool". More information in https://www.w3schools.com/w3css/ and https://maxcdn.bootstrapcdn.com/.
 
-* The code provided in this repository was used as part of an academic research documented in... _link available soon._ 
+* The code provided in this repository was used as part of an academic research documented in https://doi.org/10.1007/s11257-021-09318-3. 
