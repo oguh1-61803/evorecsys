@@ -1,6 +1,6 @@
 > # EvoRecSys
 
-Evolutionary Recommender System (EvoRecSys) is a simple Recommender System for wellbeing based on Genetic Algorithms. The recommendations provided by it are bundles which contain:
+Evolutionary Recommender System (EvoRecSys) is a simple Recommender System for well-being based on Genetic Algorithms. The recommendations provided by it are bundles which contain:
 
 1. A set of food items (a meal can be cooked with them).
 
