@@ -79,7 +79,7 @@ class Population:
 
         for index in range(0, self.number_of_individuals):
 
-            if self.initial_population[index].aptitude < self.initial_population[adversaries[index]].aptitude:
+            if self.initial_population[index].aptitude > self.initial_population[adversaries[index]].aptitude:
 
                 self.intermediate_population.insert(index, self.initial_population[index])
 
